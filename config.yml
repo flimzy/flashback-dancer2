@@ -27,3 +27,6 @@ template: "simple"
 #       start_tag: '<%'
 #       end_tag:   '%>'
 
+auth:
+    facebook:
+        app_id: "867403039963514"

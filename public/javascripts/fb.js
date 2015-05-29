@@ -34,11 +34,11 @@ function checkLoginState() {
 
 window.fbAsyncInit = function() {
 FB.init({
-    appId      : '{your-app-id}',
+    appId      : $('meta[name="facebook"]').data('app-id'), // We store the FB App Id in a <meta> tag on every page
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.2' // use version 2.2
+    version    : 'v2.3' // use version 2.3
 });
 
 // Now that we've initialized the JavaScript SDK, we call 
