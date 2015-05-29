@@ -2,4 +2,10 @@ You are not authorized. You must login.
 
 <div id="fb-root"></div>
 
-<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+<script type="text/javascript" src="<% request.uri_base %>/javascripts/fb.js"></script>
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
