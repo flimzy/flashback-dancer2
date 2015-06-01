@@ -1,11 +1,20 @@
+<div id="auth" caption="Login">
 You are not authorized. You must login.
 
-<div id="fb-root"></div>
+<br /><fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+</div>
 
 <script type="text/javascript" src="<% request.uri_base %>/js/fb.js"></script>
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
 <div id="status">
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#auth').dialog({
+            closeOnEscape: false,
+            open: function(event, ui) { $(".ui-dialog-titlebar-close", $(this).parent()).hide(); }
+        });
+    });
+</script>
